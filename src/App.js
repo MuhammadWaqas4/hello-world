@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <h1> Hello World</h1>
+     <h1> Boot camp session 2 for React starting</h1>
     </div>
   );
 }

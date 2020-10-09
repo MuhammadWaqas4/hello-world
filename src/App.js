@@ -1,26 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Dinner from './dinner.js';
-import Brak from './break.js';
-import DopaharKaKhana from './lunch.js'
+// import Dinner from './dinner.js';
+// import Brak from './break.js';
+// import DopaharKaKhana from './lunch.js'
+import {Meage} from './Message.js';
 
-function App() {
+export default function App() {
+  let [count, setCount] = useState(0);
+  let [isMorning, setMorning] = useState(true); 
+  // count = 1; not possible
+  // setCount(2);
   return (
-    <div className="App">
-      <Dinner dishName ="chicken karahi" sweetDish="Kheer"/>
+    <div className={`box ${isMorning ? 'dayLight' : '' }`} >
+      <h1> Have A Good = {isMorning ? 'Morning' : 'Night'}</h1>
       <br/>
-      <Dinner dishName ="chicken" sweetDish="Halwa Gajjar Ka"/>
+      <Meage counter={count}/>
       <br/>
-      <Brak start="6:00 am" finish="10:00 am"/>
-      {/* <Dinner start ="chicken" finish="Halwa"/> */}
-      <br/>
-      <DopaharKaKhana start = "1:00 pm" end ="4:00 pm"/>
-      {/* <Dinner start ="chicken" finish="Halwa"/> */}
-      <br/>
-      {/* <Dinner dishName ="Chicken BIRyani"/> */}
-      {/* <Dinner dishName ="Kabab"/> */}
-    </div>
+      <h1>Value of Variable Var Counter is: {count}</h1>
+       <br/>
+       <button onClick={
+         ()=> setCount(++count)
+         }> 
+         Update Counter
+         </button>
+         <button onClick={
+           ()=> setMorning(!isMorning)
+         }>
+           Update Day
+           </button>
+       </div>
   );
 }
 
-export default App;
+// export default App;

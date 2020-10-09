@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Dinner dishName ="chicken karahi" sweetDish="Kheer"/>
       <br/>
-      <Dinner dishName ="chicken" sweetDish="Halwa"/>
+      <Dinner dishName ="chicken" sweetDish="HAHAHAHA"/>
       <br/>
       <Brak start="6:00 am" finish="10:00 am"/>
       {/* <Dinner start ="chicken" finish="Halwa"/> */}
